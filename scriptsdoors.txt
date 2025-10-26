@@ -94,6 +94,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/
 Tabs.Main1:AddButton({
 	Title = "By huyduzc",
 	Callback = function()
-loadstring(game:HttpsGet("https://raw.githubusercontent.com/huyduzc/main/scripts/Loader.lua"))()
+loadstring(game:HttpsGet(""))()https://raw.githubusercontent.com/huy164210/huyduzc/refs/heads/main/scriptsdoors.txt
 	end
 })
