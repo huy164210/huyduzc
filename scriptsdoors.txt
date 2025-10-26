@@ -1,0 +1,99 @@
+-- door hướng dẫn
+-- Nút mở menu
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Size = UDim2.new(0, 30, 0, 30) -- kích thước tròn 
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0) -- góc dưới màn hình 
+ImageButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ImageButton.BorderSizePixel = 0
+ImageButton.Image = "http://www.roblox.com/asset/?id=109662778865882"
+ImageButton.Draggable = true
+ImageButton.Parent = game.CoreGui
+
+-- Góc menu
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = ImageButton
+
+-- Bấm nút để bật/tắt hub
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+-- Giao diện chính (Fluent UI)
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+repeat task.wait() until game:IsLoaded()
+
+-- Cửa sổ menu
+local Window = Fluent:CreateWindow({
+	Title = "Huyduzc Hub",
+	SubTitle = "⚠️",
+	TabWidth = 150,
+	Size = UDim2.fromOffset(380, 320), -- 👈 chỉnh size
+	Acrylic = true,
+	Theme = "Dark",
+	MinimizeKey = Enum.KeyCode.End
+})
+
+-- Tabs menu chính
+local Tabs = {
+	Main0 = Window:AddTab({ Title = "anti" }),
+	Main1 = Window:AddTab({ Title = "skill" }),
+	Main2 = Window:AddTab({ Title = "esp" })
+}
+
+------------------------------------------------
+-- TAB 1: Phụ
+------------------------------------------------
+local settings = {
+    fullBright = true,
+    noDupeDoors = true,
+    antiGloom = true,
+    espMode = "TEXT",
+    autoMandrake = true,
+    antiA90 = true,
+    antiSurge = true,
+    esp = true,
+    increasedSpeed = true,
+    eyestalkGuiding = true,
+    antiGiggle = true,
+    chatNotifier = false,
+    seekFixBridge = true,
+    noFakeBridge = false,
+    autoLoot = false,
+    autoOpenDoors = false,
+    antiLava = false,
+    seekGuiding = true
+}
+-- Tạo toggle or button
+local function addToggle(tab, name, key)
+    tab:AddToggle({
+        Name = name,
+        Default = settings[key],
+        Callback = function(value)
+            settings[key] = value
+            print(name.." is now "..tostring(value))
+            -- Thêm code xử lý thực tế ở đây
+        end
+    })
+end
+-- Thêm tất cả toggle vào Tabs.Main0 (tab "anti")
+for key, _ in pairs(settings) do
+    addToggle(Tabs.Main0, key, key)
+end
+
+------------------------------------------------
+-- TAB 2: Ví dụ thêm script
+------------------------------------------------
+Tabs.Main1:AddButton({
+	Title = "By FFJ",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+	end
+})
+
+Tabs.Main1:AddButton({
+	Title = "By huyduzc",
+	Callback = function()
+loadstring(game:HttpsGet("https://raw.githubusercontent.com/huyduzc/main/scripts/Loader.lua"))()
+	end
+})
