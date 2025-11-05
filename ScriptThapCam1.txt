@@ -25,14 +25,14 @@ end)
     
     AddButton(Tab1o, {
      Name = "realhub",
-     Disciption = "tiện lợi",
+     Desciption = "tiện lợi",
     Callback = function()
     
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
   })
   AddButton(Tab1o, {
      Name = "emote",
-     Disciption= "điệu nhảy",
+     Desciption= "điệu nhảy",
     Callback = function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"))()
@@ -41,7 +41,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/B
   
   AddButton(Tab1o, {
      Name = "shif lock",
-     Discription = "khoá tâm",
+     Description = "khoá tâm",
     Callback = function()
 	  
 loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shiftlock-12348"))()
@@ -50,10 +50,9 @@ loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shif
   
   AddButton(Tab1o, {
      Name = "size cm²",
-     Disciption= "khối xanh",
+     Desciption= "khối xanh",
     Callback = function()
 
-@┆𝐒𝐇𝐀𝐑𝐊𝐆𖠣:hitbox
 loadstring(game:HttpGet("https://pastefy.app/ItfO0tdg/raw"))()p
 esp
   end
@@ -61,7 +60,7 @@ esp
     
     AddButton(Tab1o, {
      Name = "float",
-     Disciption= "đứng trên ko",
+     Desciption= "đứng trên ko",
     Callback = function()
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
