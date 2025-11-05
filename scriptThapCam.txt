@@ -14,9 +14,9 @@ ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
-ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Size = UDim2.new(0, 60, 0, 60)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=15059956542"
+ImageButton.Image = "http://www.roblox.com/asset/?id=109662778865882"
 
 UICorner.CornerRadius = UDim.new(1, 10)
 UICorner.Parent = ImageButton
@@ -39,25 +39,26 @@ local Window = Fluent:CreateWindow({
 	MinimizeKey = Enum.KeyCode.End
 })
 
---  Các tab menu
-local Tab1o = MakeTab({Name = "synthetic"})
+--  Tab menu
+Main0 = Window:AddTab({ Title = "tonghop" })
 
 -- Button
-AddButton(Tap1o,{
-	Name = "real_hub",
+Tabs.Main0:AddButton({
+	Title = "realhub",
+	Description = "tiện lợi",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
-	end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
+end
 })
-AddButton(Tap1o,{
-	Name = "emote",
+Tabs.Main0:AddButton({
+	Title = "emote",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"))()
-	end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"))()
+end
 })
-AddButton(Tap1o,{
-	Name = "emote",
+Tabs.Main0:AddButton({
+	Title = "shiflock",
 	Callback = function()
-	    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shiftlock-12348"))()
-	end
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shiftlock-12348"))()
+end
 })
