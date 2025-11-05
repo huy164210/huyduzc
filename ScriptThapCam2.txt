@@ -1,0 +1,84 @@
+-- key
+repeat task.wait() until game:IsLoaded()
+
+       local Window = MakeWindow({
+         Hub = {
+         Title = "huyduzc",
+         ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+     }
+   }
+})
+-- cửa sổ
+       MinimizeButton({
+       ImageButton.Parent = ScreenGui
+       ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+       ImageButton.BorderSizePixel = 0
+       ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+       ImageButton.Size = UDim2.new(0, 60, 0, 60)
+       ImageButton.Draggable = true
+       Image = "http://www.roblox.com/asset/?id=109662778865882"})
+
+-- Giao diện Fluent
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
+repeat wait() until game:IsLoaded()
+
+-- Cửa sổ chính
+local Window = Fluent:CreateWindow({
+	Title = "realhub",
+	TabWidth = 157,
+	Size = UDim2.fromOffset(450, 300),
+	Acrylic = true,
+	Theme = "Dark",
+	MinimizeKey = Enum.KeyCode.End
+})
+
+------ Tab
+     local Tab1o = MakeTab({Name = "tổng hợp"})
+     
+------- BUTTON
+    
+    AddButton(Tab1o, {
+     Name = "realhub",
+     Desciption = "tiện lợi",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
+  })
+  AddButton(Tab1o, {
+     Name = "emote",
+     Desciption= "điệu nhảy",
+    Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"))()
+  end
+  })
+  
+  AddButton(Tab1o, {
+     Name = "shif lock",
+     Description = "khoá tâm",
+    Callback = function()
+	  
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Mobile-Shiftlock-12348"))()
+  end
+  })
+  
+  AddButton(Tab1o, {
+     Name = "size cm²",
+     Desciption= "khối xanh",
+    Callback = function()
+
+loadstring(game:HttpGet("https://pastefy.app/ItfO0tdg/raw"))()p
+esp
+  end
+  })
+    
+    AddButton(Tab1o, {
+     Name = "float",
+     Desciption= "đứng trên ko",
+    Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+  end
+  })
